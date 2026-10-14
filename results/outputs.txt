@@ -1,0 +1,147 @@
+trade1.py output
+Raw shape: (2035, 18)
+   trade_id                timestamp   symbol  side    price  quantity  \
+0    100197               1790845352  BTCUSDT  sell  62004.9    0.0285   
+1    101557  2026-10-01 09:21:03.172  BTCUSDT  sell  62180.8    0.3711   
+2    100573  2026-10-01 09:07:37.614  BTCUSDT   buy  62090.2    0.0583   
+3    101717  2026-10-01 09:23:29.337  BTCUSDT  sell  62237.0    0.0104   
+4    100201  2026-10-01 09:02:35.129  BTCUSDT   buy  61994.8    0.1156   
+
+   bid_price_1  bid_qty_1  bid_price_2  bid_qty_2  bid_price_3  bid_qty_3  \
+0      62004.9      0.332      62004.8      0.280      62004.1      0.634   
+1      62180.8      0.309      62180.6      0.260      62180.2      1.939   
+2      62090.1      0.274      62089.8      0.310      62089.4      1.549   
+3      62237.0      2.530      62236.8      4.173      62236.4      3.021   
+4      61994.5      0.965      61994.3      0.809      61993.8      0.951   
+
+   ask_price_1  ask_qty_1  ask_price_2  ask_qty_2  ask_price_3  ask_qty_3  
+0      62005.0      1.205      62005.2      1.875      62005.8      1.451  
+1      62181.0      0.161      62181.3      0.295      62181.6      0.903  
+2      62090.2      0.394      62090.3      0.597      62090.9      1.551  
+3      62237.2      0.406      62237.3      0.802      62238.0      0.711  
+4      61994.8      0.194      61995.0      3.876      61995.6      2.716  
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2035 entries, 0 to 2034
+Data columns (total 18 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   trade_id     2035 non-null   int64  
+ 1   timestamp    2035 non-null   object 
+ 2   symbol       2035 non-null   object 
+ 3   side         2020 non-null   object 
+ 4   price        2010 non-null   object 
+ 5   quantity     2015 non-null   float64
+ 6   bid_price_1  2035 non-null   float64
+ 7   bid_qty_1    2005 non-null   float64
+ 8   bid_price_2  2035 non-null   float64
+ 9   bid_qty_2    2035 non-null   float64
+ 10  bid_price_3  2035 non-null   float64
+ 11  bid_qty_3    2035 non-null   float64
+ 12  ask_price_1  2015 non-null   float64
+ 13  ask_qty_1    2035 non-null   float64
+ 14  ask_price_2  2035 non-null   float64
+ 15  ask_qty_2    2035 non-null   float64
+ 16  ask_price_3  2035 non-null   float64
+ 17  ask_qty_3    2035 non-null   float64
+dtypes: float64(13), int64(1), object(4)
+memory usage: 286.3+ KB
+None
+trade2.py output
+            trade_id     quantity   bid_price_1    bid_qty_1   bid_price_2  \
+count    2035.000000  2015.000000   2035.000000  2005.000000   2035.000000   
+mean   101001.972973     0.080568  62108.614644     0.600706  62108.408157   
+std       576.990768     0.111823     80.572214     0.827563     80.573348   
+min    100001.000000     0.000000  61954.000000     0.014000  61953.700000   
+25%    100503.500000     0.025950  62041.300000     0.180000  62041.100000   
+50%    101001.000000     0.048800  62115.800000     0.346000  62115.500000   
+75%    101500.500000     0.096050  62171.600000     0.701000  62171.400000   
+max    102000.000000     2.789400  62253.900000    11.426000  62253.600000   
+
+         bid_qty_2   bid_price_3    bid_qty_3   ask_price_1    ask_qty_1  \
+count  2035.000000   2035.000000  2035.000000   2015.000000  2035.000000   
+mean      0.999201  62107.904816     1.634119  62108.659901     0.620175   
+std       1.272169     80.575167     1.939181     80.585770     0.708494   
+min       0.012000  61953.200000     0.038000  61954.100000     0.021000   
+25%       0.310000  62040.650000     0.503000  62041.050000     0.199500   
+50%       0.593000  62115.000000     0.994000  62116.000000     0.390000   
+75%       1.159000  62170.850000     1.993000  62171.750000     0.754000   
+max      13.472000  62253.300000    24.538000  62254.000000     8.652000   
+
+        ask_price_2    ask_qty_2   ask_price_3    ask_qty_3  
+count   2035.000000  2035.000000   2035.000000  2035.000000  
+mean   62108.985995     1.011525  62109.485258     1.741260  
+std       80.576749     1.306832     80.571271     2.221807  
+min    61954.400000     0.025000  61954.700000     0.029000  
+25%    62041.600000     0.306000  62042.150000     0.536500  
+50%    62116.100000     0.604000  62116.800000     1.067000  
+75%    62172.000000     1.194500  62172.500000     1.991000  
+max    62254.200000    21.250000  62254.800000    27.868000  
+side
+buy     970
+sell    930
+BUY      63
+Sell     57
+NaN      15
+Name: count, dtype: int64
+symbol
+BTCUSDT     1974
+btcusdt       24
+BTC/USDT      21
+BTC-USDT      16
+Name: count, dtype: int64
+trade3.py output
+Duplicates: 35
+Missing:
+ trade_id        0
+timestamp       0
+symbol          0
+side           15
+price          25
+quantity       20
+bid_price_1     0
+bid_qty_1      30
+bid_price_2     0
+bid_qty_2       0
+bid_price_3     0
+bid_qty_3       0
+ask_price_1    20
+ask_qty_1       0
+ask_price_2     0
+ask_qty_2       0
+ask_price_3     0
+ask_qty_3       0
+dtype: int64
+Price with $: 50
+trade4.py output
+Cleaned
+trade5.py output
+0   2026-10-01 09:02:32.000
+1   2026-10-01 09:21:03.172
+2   2026-10-01 09:07:37.614
+3   2026-10-01 09:23:29.337
+4   2026-10-01 09:02:35.129
+Name: timestamp_parsed, dtype: datetime64[ns]
+trade6.py output
+After dedup: 2000 rows
+trade7.py output
+Outliers fixed
+trade8.py output
+Fixed
+trade9.py output
+   spread  mid_price  order_imbalance
+0     0.1   61994.65         0.248175
+1     0.1   61988.75              NaN
+2     0.5   61991.05        -0.027464
+3     0.2   61980.60        -0.655095
+4     0.3   61981.45         0.369270
+trade10.py output
+                        open     high      low    close   volume
+timestamp_parsed                                                
+2026-10-01 09:00:00  61994.6  62006.7  61962.9  61972.0  6.90020
+2026-10-01 09:01:00  61969.0  62030.4  61967.2  62011.2  7.61985
+2026-10-01 09:02:00  62019.6  62020.4  61976.7  61977.9  7.14230
+2026-10-01 09:03:00  61978.9  62039.0  61954.1  62032.7  5.97210
+2026-10-01 09:04:00  62028.7  62062.9  62020.1  62026.1  4.30970
+trade11.py output
+ Plots saved
+
